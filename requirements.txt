@@ -1,0 +1,27 @@
+# Requirements for Python 3.12
+
+# Image and media processing
+opencv-python==4.8.1
+mediapipe==0.10.9
+numpy==1.26.3
+
+# FastAPI related
+fastapi>=0.95.0
+uvicorn>=0.21.0
+python-multipart>=0.0.6
+
+# Environment variable handling
+python-dotenv==1.0.1
+
+# Azure related
+azure-cosmos>=4.3.0
+azure-storage-blob>=12.14.0
+
+# PDF and document processing
+pymupdf>=1.21.1
+python-docx>=0.8.11
+openai>=0.27.0
+requests==2.31.0
+
+# PDF generation
+reportlab>=3.6.12 
