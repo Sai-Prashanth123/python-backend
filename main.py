@@ -72,28 +72,28 @@ app.add_middleware(
 
 # OpenAI API Credentials from environment variables
 openai.api_key = os.getenv("OPENAI_API_KEY")
-openai.api_base = os.getenv("OPENAI_API_BASE")
-openai.api_type = os.getenv("OPENAI_API_TYPE")
-openai.api_version = os.getenv("OPENAI_API_VERSION")
-deployment_name = os.getenv("OPENAI_DEPLOYMENT_NAME")
+openai.api_base = os.getenv("OPENAI_API_BASE","https://ganes-m7mx3eg1-swedencentral.cognitiveservices.azure.com/")
+openai.api_type = os.getenv("OPENAI_API_TYPE","azure")
+openai.api_version = os.getenv("OPENAI_API_VERSION","2025-01-01-preview")
+deployment_name = os.getenv("OPENAI_DEPLOYMENT_NAME","gpt-4o")
 
 # Azure Cosmos DB Credentials from environment variables
-HOST = os.getenv("COSMOS_HOST")
+HOST = os.getenv("COSMOS_HOST","https://jobspringdatabase.documents.azure.com:443/")
 MASTER_KEY = os.getenv("COSMOS_MASTER_KEY")
-RESUME_DATABASE_ID = os.getenv("RESUME_DATABASE_ID")
-RESUME_CONTAINER_ID = os.getenv("RESUME_CONTAINER_ID")
-JOB_DATABASE_ID = os.getenv("JOB_DATABASE_ID")
-JOB_CONTAINER_ID = os.getenv("JOB_CONTAINER_ID")
-TAILORED_RESUME_CONTAINER_ID = os.getenv("TAILORED_RESUME_CONTAINER_ID")
+RESUME_DATABASE_ID = os.getenv("RESUME_DATABASE_ID","resume")
+RESUME_CONTAINER_ID = os.getenv("RESUME_CONTAINER_ID","resume_outputs")
+JOB_DATABASE_ID = os.getenv("JOB_DATABASE_ID","resume")
+JOB_CONTAINER_ID = os.getenv("JOB_CONTAINER_ID","resume_outputs")
+TAILORED_RESUME_CONTAINER_ID = os.getenv("TAILORED_RESUME_CONTAINER_ID","resume_outputs")
 PARTITION_KEY_PATH = os.getenv("PARTITION_KEY_PATH", "/items")
 
 # Azure Blob Storage Configuration from environment variables
 BLOB_CONNECTION_STRING = os.getenv("BLOB_CONNECTION_STRING")
-BLOB_CONTAINER_NAME = os.getenv("BLOB_CONTAINER_NAME")
-BLOB_SAS_TOKEN = os.getenv("BLOB_SAS_TOKEN")
-BLOB_BASE_URL = os.getenv("BLOB_BASE_URL")
-BLOB_SAS_URL = os.getenv("BLOB_SAS_URL")
-BLOB_CONNECTION_STRING_WITH_SAS = os.getenv("BLOB_CONNECTION_STRING_WITH_SAS")
+BLOB_CONTAINER_NAME = os.getenv("BLOB_CONTAINER_NAME","new")
+BLOB_SAS_TOKEN = os.getenv("BLOB_SAS_TOKEN","sp=racwdli&st=2025-03-10T16:38:23Z&se=2032-03-17T00:38:23Z&spr=https&sv=2022-11-02&sr=c&sig=athyeTm0jMzb1Zqtj162RDbt1Avm3stH2EuigCFW0vE%3D")
+BLOB_BASE_URL = os.getenv("BLOB_BASE_URL","https://pdf1.blob.core.windows.net")
+BLOB_SAS_URL = os.getenv("BLOB_SAS_URL","https://pdf1.blob.core.windows.net/new?sp=racwdli&st=2025-03-10T16:38:23Z&se=2032-03-17T00:38:23Z&spr=https&sv=2022-11-02&sr=c&sig=athyeTm0jMzb1Zqtj162RDbt1Avm3stH2EuigCFW0vE%3D")
+BLOB_CONNECTION_STRING_WITH_SAS = os.getenv("BLOB_CONNECTION_STRING_WITH_SAS","BlobEndpoint=https://pdf1.blob.core.windows.net/;QueueEndpoint=https://pdf1.queue.core.windows.net/;FileEndpoint=https://pdf1.file.core.windows.net/;TableEndpoint=https://pdf1.table.core.windows.net/;SharedAccessSignature=sv=2022-11-02&ss=bfqt&srt=sco&sp=rwdlacupiytfx&se=2025-03-03T11:46:45Z&st=2025-03-03T03:46:45Z&spr=https&sig=xgUIuQa9u11Yau8E0df%2Fwk0YsQWPIqsBvtylDXQyp6Y%3D")
 
 # Admin Configuration
 ADMIN_KEY = os.getenv("ADMIN_KEY", "resume_admin_key_2025")
