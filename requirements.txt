@@ -1,9 +1,6 @@
 # Requirements for Python 3.12
 
-# Image and media processing
-opencv-python==4.8.1
-mediapipe==0.10.9
-numpy==1.26.3
+
 
 # FastAPI related
 fastapi>=0.95.0
